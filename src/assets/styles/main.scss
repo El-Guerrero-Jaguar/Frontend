@@ -18,3 +18,14 @@ html {
 body {
   font-size: 1.6rem;
 }
+
+#app {
+  display: grid;
+  grid-template-areas: "header header" "sidebar content";
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 70px auto;
+}
+
+main {
+  grid-area: content;
+}

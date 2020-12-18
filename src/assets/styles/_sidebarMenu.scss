@@ -1,0 +1,8 @@
+.sidebarmenu_container {
+  grid-area: sidebar;
+  position: fixed;
+  width: 20vw;
+  height: calc(100vh - 70px);
+  background-color: rgba(83, 83, 83, .6);
+  top: 70px;
+}

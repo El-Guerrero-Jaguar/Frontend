@@ -8,16 +8,19 @@ import Vacancy from '../pages/Vacancy';
 import VacanciesApplied from '../pages/VacanciesApplied';
 import VacancyStatus from '../pages/VacancyStatus';
 import NotFound from '../pages/NotFound';
+import Layout from '../components/Layout';
 
 const App = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/vacancies/applied/" component={VacanciesApplied} />
-      <Route exact path="/vacancies/:id" component={Vacancy} />
-      <Route exact path="/vacancies/applied/:id" component={VacancyStatus} />
-      <Route component={NotFound} />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/vacancies/applied/" component={VacanciesApplied} />
+        <Route exact path="/vacancies/:id" component={Vacancy} />
+        <Route exact path="/vacancies/applied/:id" component={VacancyStatus} />
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   </BrowserRouter>
 );
 
