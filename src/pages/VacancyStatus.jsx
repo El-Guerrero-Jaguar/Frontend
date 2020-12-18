@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppContext } from '../context';
 
-const VacantStatus = () => {
+const VacancyStatus = () => {
   const [{ isCoach }] = useAppContext();
 
   return (
@@ -9,4 +9,4 @@ const VacantStatus = () => {
   );
 };
 
-export default VacantStatus;
+export default VacancyStatus;
