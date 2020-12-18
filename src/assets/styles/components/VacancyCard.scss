@@ -1,0 +1,52 @@
+@import '../vars';
+
+.VacancyCard {
+  &-container {
+    display: flex;
+    width: 550px;
+    min-height: 140px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .3);
+    color: black;
+    text-decoration: none;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &-company {
+    font-size: 18px;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-content {
+      p {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+    &-buttons {
+      button {
+      width: 150px;
+      height: 40px;
+      margin-left: 20px;
+      border: none;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    }
+  }
+  &-modality {
+    padding: 3px 15px 5px;
+    background-color: white;
+    border-radius: 20px;
+  }
+}
