@@ -1,0 +1,56 @@
+@import "../vars";
+
+.HeaderVacancy {
+  &-container {
+    display: flex;
+    width: 80vw;
+    height: 180px;
+    padding: 15px;
+    background-color: rgba(93, 93, 93, .6);
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &-title {
+    font-family: $font-bebas;
+  }
+  &-sectionOne,
+  &-sectionTwo,
+  &-sectionTwo-content {
+    display: flex;
+    align-items: center;
+  }
+
+  &-sectionOne {
+    h2 {
+      font-size: 26px;
+      margin-right: 20px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+  &-sectionTwo {
+    justify-content: space-between;
+    p {
+      margin-right: 20px;
+    }
+  }
+  &-modality {
+    padding: 3px 15px 5px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  &-buttons {
+    button {
+      width: 150px;
+      height: 40px;
+      margin-left: 20px;
+      border: none;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
