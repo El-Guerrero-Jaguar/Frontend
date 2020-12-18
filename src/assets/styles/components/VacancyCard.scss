@@ -12,6 +12,13 @@
     text-decoration: none;
     justify-content: space-between;
     flex-direction: column;
+    &-small {
+      @extend .VacancyCard-container;
+      width: 400px;
+      min-height: 90px;
+      align-items: center;
+      flex-direction: row;
+    }
   }
   &-title {
     font-size: 24px;
@@ -32,16 +39,16 @@
     }
     &-buttons {
       button {
-      width: 150px;
-      height: 40px;
-      margin-left: 20px;
-      border: none;
-      font-family: $font-lato;
-      font-size: 1.6rem;
-      &:hover {
-        cursor: pointer;
+        width: 150px;
+        height: 40px;
+        margin-left: 20px;
+        border: none;
+        font-family: $font-lato;
+        font-size: 1.6rem;
+        &:hover {
+          cursor: pointer;
+        }
       }
-    }
     }
   }
   &-modality {
