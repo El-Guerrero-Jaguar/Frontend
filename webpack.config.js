@@ -46,6 +46,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new MiniCSSExtractPlugin({
+      filename: 'style.css',
+    }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
     })
