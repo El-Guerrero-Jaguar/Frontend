@@ -28,4 +28,7 @@ body {
 
 main {
   grid-area: content;
+  &.isCoach {
+    grid-area: 2 / 1 / 2 / 3;
+  }
 }
