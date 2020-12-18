@@ -3,7 +3,8 @@
 .TableStatusVacancies {
   &-container {
     display: grid;
-    width: 70vw;
+    width: 80%;
+    margin: 20px auto;
     grid-template-areas: "headerTable" "contentTable";
     grid-template-rows: 80px auto;
     background-color: lightgray;
@@ -12,7 +13,7 @@
     grid-area: headerTable;
     display: grid;
     grid-template-areas: "vtitle stitle";
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
     border-bottom: 1px solid rgba(83, 83, 83, .5);
     h2 {
       grid-area: vtitle;
@@ -26,7 +27,7 @@
     grid-area: contentTable;
     display: grid;
     grid-template-areas: "vacanciesTable statusTable";
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
     &--left,
     &--right {
       padding: 20px 0;

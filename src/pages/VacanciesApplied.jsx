@@ -1,11 +1,16 @@
 import React from 'react';
 import { useAppContext } from '../context';
 
+import TableStatusVacancies from '../containers/TableStatusVacancies';
+
 const VacanciesApplied = () => {
   const [{ isCoach }] = useAppContext();
 
   return (
-    <h1>{ isCoach ? 'Vacantes del lado del coach' : 'Vacantes del lado del alumno'}</h1>
+    <>
+      {isCoach && <h1 className="VacanciesApplied-title">Aplicaciones del estudiante XXXX</h1>}
+      <TableStatusVacancies />
+    </>
   );
 };
 
