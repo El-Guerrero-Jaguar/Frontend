@@ -1,5 +1,8 @@
 import React from 'react';
 import withVacancies from '../hoc/withVacancies';
+
+import '../assets/styles/containers/VacanciesList.scss';
+
 import VacancyCard from '../components/VacancyCard';
 import VacancyCardSmall from '../components/VacancyCardSmall';
 
@@ -8,8 +11,15 @@ const VacaciesList = ({ vacancies, small = false }) => (
     {
       vacancies.map((vacancy) => (
         small
-          ? <VacancyCardSmall key={vacancy.id} vacancy={vacancy} />
-          : <VacancyCard key={vacancy.id} vacancy={vacancy} />
+          ? (
+            <div key={vacancy.id} className="VacancyList-small">
+              <VacancyCardSmall vacancy={vacancy} />
+              <div className="VacancyList-status">
+                <p>Intro</p>
+                <button type="button">Editar</button>
+              </div>
+            </div>
+          ) : <VacancyCard key={vacancy.id} vacancy={vacancy} />
       ))
     }
   </>

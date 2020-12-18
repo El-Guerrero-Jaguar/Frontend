@@ -11,15 +11,7 @@ const TableStatusVacancies = () => (
       <h2>Estatus</h2>
     </div>
     <div className="TableStatusVacancies-content">
-      <div className="TableStatusVacancies-content--left">
-        <VacaciesList small />
-      </div>
-      <div className="TableStatusVacancies-content--right">
-        <div className="TableStatusVacancies-statusItem">
-          <p>Intro</p>
-          <button type="button">Editar</button>
-        </div>
-      </div>
+      <VacaciesList small />
     </div>
   </div>
 );

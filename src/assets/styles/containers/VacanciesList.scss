@@ -1,0 +1,33 @@
+@import '../vars';
+
+.VacancyList {
+  &-small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-status {
+    display: flex;
+    width: 35%;
+    min-height: 90px;
+    margin: 20px;
+    padding: 10px;
+    border-left: 6px solid rgba(83, 83, 83, .6);
+    border-bottom: 6px solid rgba(83, 83, 83, .6);
+    align-items: center;
+    justify-content: space-around;
+    p {
+      font-size: 20px;
+    }
+    button {
+      width: 120px;
+      height: 30px;
+      border: none;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

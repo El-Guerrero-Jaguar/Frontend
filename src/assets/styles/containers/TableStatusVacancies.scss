@@ -25,38 +25,7 @@
   }
   &-content {
     grid-area: contentTable;
-    display: grid;
-    grid-template-areas: "vacanciesTable statusTable";
-    grid-template-columns: 60% 40%;
-    &--left,
-    &--right {
-      padding: 20px 0;
-    }
-    &--left {
-      grid-area: vacanciesTable;
-      border-right: 1px solid rgba(83, 83, 83, .5);;
-    }
-    &--right {
-      grid-area: statusTable;
-    }
-  }
-  &-statusItem {
     display: flex;
-    min-height: 90px;
-    margin: 20px;
-    padding: 10px;
-    background-color: rgba(83, 83, 83, .6);
-    align-items: center;
-    justify-content: space-between;
-    button {
-      width: 120px;
-      height: 30px;
-      border: none;
-      font-family: $font-lato;
-      font-size: 1.6rem;
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    flex-direction: column;
   }
 }
