@@ -1,0 +1,61 @@
+@import '../vars';
+
+.TableStatusVacancies {
+  &-container {
+    display: grid;
+    width: 70vw;
+    grid-template-areas: "header" "content";
+    grid-template-rows: 80px auto;
+    background-color: lightgray;
+  }
+  &-header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "vtitle stitle";
+    grid-template-columns: 65% 35%;
+    border-bottom: 1px solid rgba(83, 83, 83, .5);
+    h2 {
+      grid-area: vtitle;
+      place-self: center;
+      &:last-child {
+        grid-area: stitle;
+      }
+    }
+  }
+  &-content {
+    grid-area: content;
+    display: grid;
+    grid-template-areas: "vacancies status";
+    grid-template-columns: 65% 35%;
+    &--left,
+    &--right {
+      padding: 20px 0;
+    }
+    &--left {
+      grid-area: vacancies;
+      border-right: 1px solid rgba(83, 83, 83, .5);;
+    }
+    &--right {
+      grid-area: status;
+    }
+  }
+  &-statusItem {
+    display: flex;
+    min-height: 90px;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgba(83, 83, 83, .6);
+    align-items: center;
+    justify-content: space-between;
+    button {
+      width: 120px;
+      height: 30px;
+      border: none;
+      font-family: $font-lato;
+      font-size: 1.6rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
