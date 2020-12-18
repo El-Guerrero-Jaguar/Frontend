@@ -8,14 +8,17 @@ import SidebarCoach from '../containers/SidebarCoach';
 
 const Layout = ({ children }) => {
   const [{ isCoach }] = useAppContext();
-  const match = useRouteMatch('/');
+  const match = useRouteMatch({
+    path: '/',
+    strict: true,
+  });
 
   return (
     <>
       <Header />
-      {(isCoach && !match) && <SidebarCoach />}
+      {(isCoach && !match.isExact) && <SidebarCoach />}
       {!isCoach && <SidebarMenu />}
-      <main className={isCoach ? 'isCoach' : ''}>
+      <main className={(isCoach && match.isExact) ? 'isCoach' : ''}>
         {children}
       </main>
     </>
