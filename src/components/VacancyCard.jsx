@@ -12,7 +12,7 @@ const VacancyCard = ({ vacancy }) => {
   };
 
   return (
-    <Link className="VacancyCard-container" to={`/vacacies/${vacancy.id}`}>
+    <Link className="VacancyCard-container" to={`/vacancies/${vacancy.id}`}>
       <h4 className="VacancyCard-title">{vacancy.title}</h4>
       <p className="VacancyCard-company">{vacancy.company}</p>
       <div className="VacancyCard-footer">
