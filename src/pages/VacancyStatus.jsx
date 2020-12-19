@@ -16,7 +16,7 @@ const VacancyStatus = () => {
   return (
     <>
       <HeaderVacancy isCoach={isCoach} vacancy={vacancy} />
-      <p className="Vacancy-description">{vacancy.description}</p>
+      <div className="Vacancy-description" dangerouslySetInnerHTML={{ __html: vacancy.description }} />
     </>
   );
 };

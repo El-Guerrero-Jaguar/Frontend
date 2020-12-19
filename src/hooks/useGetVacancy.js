@@ -36,8 +36,6 @@ const useGetVacancy = (id) => {
     urlCompany: 'Enlace de la empresa',
   });
 
-  console.log(data);
-
   useEffect(() => {
     getVacancy({ variables: { id } });
     if (data !== undefined) {
@@ -45,7 +43,7 @@ const useGetVacancy = (id) => {
         ...data.vacancy,
       });
     }
-  }, [data]);
+  }, [data, id]);
 
   return [vacancy, loading];
 };
