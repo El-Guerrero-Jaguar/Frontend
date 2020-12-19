@@ -1,6 +1,30 @@
 import React from 'react';
+// import { useQuery, gql } from '@apollo/client';
+
+// const GetVacancy = gql`
+//   query GetVacancy($id: ID) {
+//     vacants(id: $id) {
+//       id
+//       title
+//       company
+//       description
+//       town
+//       status
+//       rating
+//       modality
+//       date
+//       salary
+//       urlVacant
+//       urlCompany
+//     }
+// }
+// `;
 
 const withVacancies = (Component) => (props) => {
+  // const { loading, error, data } = useQuery(GetVacancy, { variables: { id: '12' } });
+
+  // if (loading) return <h1>Loading...</h1>;
+  // if (error) return <h1>Error</h1>;
   const data = [
     {
       id: 0,

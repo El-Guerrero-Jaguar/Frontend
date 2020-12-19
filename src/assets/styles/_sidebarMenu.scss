@@ -5,4 +5,26 @@
   height: calc(100vh - 70px);
   background-color: rgba(83, 83, 83, .6);
   top: 70px;
+  nav {
+    height: 100%;
+    width: 100%;
+    ul {
+      margin: 20px 30px;
+      list-style: none;
+      li {
+        margin: 0 0 20px;
+        .active {
+          background: rgba(60, 60, 60, .5);
+        }
+        a {
+          display: block;
+          width: 100%;
+          padding: 5px;
+          color: black;
+          font-size: 2rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
