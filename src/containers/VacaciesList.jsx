@@ -1,5 +1,4 @@
 import React from 'react';
-import withVacancies from '../hoc/withVacancies';
 
 import '../assets/styles/containers/VacanciesList.scss';
 
@@ -25,4 +24,4 @@ const VacaciesList = ({ vacancies, small = false }) => (
   </>
 );
 
-export default withVacancies(VacaciesList);
+export default VacaciesList;
