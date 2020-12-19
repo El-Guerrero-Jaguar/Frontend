@@ -1,0 +1,25 @@
+.StudentList {
+  &_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  &_item {
+    display: flex;
+    width: 90%;
+    margin: 20px auto 0;
+    padding: 15px 10px;
+    background-color: rgba(83, 83, 83, .5);
+    text-decoration: none;
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+    &-text {
+      color: black;
+    }
+  }
+}
