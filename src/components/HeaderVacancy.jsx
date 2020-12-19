@@ -22,7 +22,8 @@ const HeaderVacancy = ({ isCoach, vacancy }) => {
         modal && (
           <Modal handleModal={handleModal}>
             {
-              isCoach ? <HeaderVacancyForm vacancy={vacancy} /> : <HeaderVacancyMessage />
+              isCoach ? <HeaderVacancyForm vacancy={vacancy} />
+                : <HeaderVacancyMessage vacancy={vacancy} />
             }
           </Modal>
         )
