@@ -6,6 +6,9 @@ const AppContext = createContext(null);
 export const AppContextProvider = ({ children }) => {
   const initialState = {
     isCoach: false,
+    user: {
+      name: 'TPCoach',
+    },
   };
 
   return (
