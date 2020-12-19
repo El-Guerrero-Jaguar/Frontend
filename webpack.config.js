@@ -41,6 +41,17 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ]
+      },
+      {
+        test: /\.(png|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000,
+            },
+          }
+        ]
       }
     ]
   },
