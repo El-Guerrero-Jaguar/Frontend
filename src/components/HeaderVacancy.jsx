@@ -5,8 +5,10 @@ import useModal from '../hooks/useModal';
 import '../assets/styles/components/HeaderVacancy.scss';
 
 import Modal from './Modal';
+import HeaderVacancyForm from './HeaderVacancyForm';
+import HeaderVacancyMessage from './HeaderVacancyMessage';
 
-const HeaderVacancy = ({ isCoach }) => {
+const HeaderVacancy = ({ isCoach, vacancy }) => {
   const match = useRouteMatch('/vacancies/applied/:id');
   const [modal, handleModal] = useModal();
 
@@ -20,17 +22,7 @@ const HeaderVacancy = ({ isCoach }) => {
         modal && (
           <Modal handleModal={handleModal}>
             {
-              isCoach ? (
-                <>
-                  <p>Form para publicar en forma la vacante</p>
-                  <button type="button">Publicar la oferta</button>
-                </>
-              ) : (
-                <>
-                  <p>Mensaje para copiar y mandarselo a Shai</p>
-                  <button type="button">Copiar mensaje</button>
-                </>
-              )
+              isCoach ? <HeaderVacancyForm vacancy={vacancy} /> : <HeaderVacancyMessage />
             }
           </Modal>
         )
@@ -44,14 +36,14 @@ const HeaderVacancy = ({ isCoach }) => {
           )
         }
         <div className="HeaderVacancy-sectionOne">
-          <h2>Titulo de la vacante</h2>
-          <h3>Nombre de la empresa</h3>
+          <h2>{vacancy.title}</h2>
+          <h3>{vacancy.company}</h3>
         </div>
         <div className="HeaderVacancy-sectionTwo">
           <div className="HeaderVacancy-sectionTwo-content">
-            <p>Ciudad</p>
+            <p>{vacancy.town}</p>
             <span className="HeaderVacancy-modality">
-              remoto
+              {vacancy.modality}
             </span>
           </div>
           {

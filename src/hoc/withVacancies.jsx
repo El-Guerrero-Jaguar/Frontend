@@ -3,7 +3,7 @@ import { useQuery, gql } from '@apollo/client';
 
 const GetAllVacancies = gql`
   query AllVacancies {
-    GetAllVacants {
+    vacancies: GetAllVacants {
       id
       title
       company
@@ -27,7 +27,7 @@ const withVacancies = (Component) => (props) => {
   if (error) return <h1>Error</h1>;
 
   return (
-    <Component vacancies={data} {...props} />
+    <Component vacancies={!data ? [] : data.vacancies} {...props} />
   );
 };
 

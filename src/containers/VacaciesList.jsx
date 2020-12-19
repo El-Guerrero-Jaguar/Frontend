@@ -27,7 +27,7 @@ const VacaciesList = ({ vacancies, small = false }) => {
               <div key={vacancy.id} className="VacancyList-small">
                 <VacancyCardSmall vacancy={vacancy} />
                 <div className="VacancyList-status">
-                  <p>Intro</p>
+                  <p>{vacancy.status}</p>
                   <button type="button" onClick={handleModal}>Editar</button>
                 </div>
               </div>

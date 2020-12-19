@@ -23,24 +23,25 @@ const GetVacancy = gql`
 const useGetVacancy = (id) => {
   const [getVacancy, { loading, data }] = useLazyQuery(GetVacancy, { fetchPolicy: 'cache-and-network' });
   const [vacancy, setVacancy] = useState({
-    title: '',
-    company: '',
-    description: '',
-    town: '',
-    status: '',
+    title: 'Titulo de la vacante',
+    company: 'Nombre de la empresa',
+    description: 'Descripción de la vacante',
+    town: 'País o ciudad',
+    status: 'Estatus de la vacante',
     rating: '',
-    modality: '',
+    modality: 'Modalidad de la vacante',
     date: '',
     salary: '',
-    urlVacant: '',
-    urlCompany: '',
+    urlVacant: 'Enlace de la vacante',
+    urlCompany: 'Enlace de la empresa',
   });
+
+  console.log(data);
 
   useEffect(() => {
     getVacancy({ variables: { id } });
     if (data !== undefined) {
       setVacancy({
-        ...vacancy,
         ...data.vacancy,
       });
     }
