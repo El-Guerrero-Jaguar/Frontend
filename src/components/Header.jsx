@@ -4,11 +4,11 @@ import { useAppContext } from '../context';
 
 import '../assets/styles/_header.scss';
 
-import logo from '../assets/statics/logoPlatzimaster.png';
-import profile from '../assets/statics/profile.png';
+import logo from '../assets/statics/logoPlatzimasterDark.png';
+import profile from '../assets/statics/profile.svg';
 
 const Header = () => {
-  const [{ user }, dispatch] = useAppContext();
+  const [{ isCoach }, dispatch] = useAppContext();
 
   const handleUser = () => {
     dispatch({
@@ -23,7 +23,7 @@ const Header = () => {
       </Link>
       <div className="Header-user" onClick={handleUser} onKeyUp={handleUser} role="button" tabIndex={0}>
         <img src={profile} alt="User" />
-        <h1>{user.name}</h1>
+        <h1>{isCoach ? 'TPCoach' : 'Student'}</h1>
       </div>
     </header>
   );

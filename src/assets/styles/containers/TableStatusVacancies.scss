@@ -7,14 +7,15 @@
     margin: 20px auto;
     grid-template-areas: "headerTable" "contentTable";
     grid-template-rows: 80px auto;
-    background-color: lightgray;
+    background-color: #edf3f0;
+    border-radius: 4px;
   }
   &-header {
     grid-area: headerTable;
     display: grid;
     grid-template-areas: "vtitle stitle";
     grid-template-columns: 60% 40%;
-    border-bottom: 1px solid rgba(83, 83, 83, .5);
+    border-bottom: 2px solid rgb(225, 225, 225);
     h2 {
       grid-area: vtitle;
       place-self: center;

@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  background-color: $c-grayLigth;
   font-size: 1.6rem;
 }
 
@@ -41,7 +42,8 @@ main {
     &-alumns {
       display: flex;
       flex-direction: column;
-      background-color: lavender;
+      background-color: #edf3f0;
+      border-radius: 4px;
       margin: 2.5%;
       h2 {
         margin: 15px 20px;
@@ -86,5 +88,6 @@ main {
 .VacanciesApplied-title {
   margin: 30px 0;
   font-family: $font-bebas;
+  letter-spacing: .12rem;
   text-align: center;
 }

@@ -3,7 +3,8 @@
   position: fixed;
   width: 20%;
   height: calc(100vh - 70px);
-  background-color: rgba(83, 83, 83, .6);
+  background-color: white;
+  border-right: 2px solid rgb(225, 225, 225);
   top: 70px;
   nav {
     height: 100%;
@@ -14,7 +15,8 @@
       li {
         margin: 0 0 20px;
         .active {
-          background: rgba(60, 60, 60, .5);
+          background: lighten($color: $c-grayLigth, $amount: 7.5);
+          border-radius: 4px;
         }
         a {
           display: flex;
@@ -24,6 +26,10 @@
           font-size: 2rem;
           text-decoration: none;
           align-items: center;
+          transition: background .5s ease;
+          &:hover {
+            @extend .active;
+          }
         }
         img {
           margin-right: 10px;

@@ -17,7 +17,7 @@ const VacancyCard = ({ vacancy }) => {
       <p className="VacancyCard-company">{vacancy.company}</p>
       <div className="VacancyCard-footer">
         <div className="VacancyCard-footer-content">
-          <p>{vacancy.country}</p>
+          <p>{vacancy.town}</p>
           <span className="VacancyCard-modality">
             {vacancy.modality}
           </span>
